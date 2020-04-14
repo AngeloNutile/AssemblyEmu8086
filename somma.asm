@@ -11,7 +11,7 @@
     MOV AX,DATA  ; copiamo in AX indirizzo di partenza del segmento DATA
     MOV DS,AX    ; copiamo ora nel registro DS tale valore
     
-    MOV AL,NUM1  ; AL conterra' 9
+    MOV AL,NUM1  ; AL conterra' 9h (posso utilizzare il registro AL 8 bit)
     ADD AL,NUM2  ; AL = AL + 7h = 10h
     
     MOV RESULT,AL ; salviamo il risultato  
