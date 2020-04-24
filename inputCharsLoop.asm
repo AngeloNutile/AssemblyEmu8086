@@ -6,8 +6,8 @@
 ; CMP a,b - confronta i due operandi
 ;           in pratica effettua una sottrazione
 ;           imposta i flags 
-;               ZF = 0 se a != b    ZF = 1 se a == b
-;               CF = 0 se a >= b    CF = 1 se a < b
+;               ZF = 0 se a != b    ZF = 1 se a == b (Zero Flag)
+;               CF = 0 se a >= b    CF = 1 se a < b  (Carry Flag)
 ; -------------------------------------------------- 
 ; J = JUMP - salto condizionato
 ; JNE = Jump if Not Equal (salta se ZF== 0)
@@ -32,7 +32,7 @@
     ciclo:     
         INT 21h   ; INPUT
         CMP AL, 13; compara il codice ASCII con 13 (invio Dh oppure 13)
-    JNE ciclo     ; va all'etichetta se il precedente confronto se .p'p'p  
+    JNE ciclo     ; va all'etichetta se il precedente confronto se generato ZF=1 (AL != 13)
           
    
     
