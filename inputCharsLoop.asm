@@ -1,7 +1,7 @@
 ; --------------------------------------------------
 ; Ciclo per chiedere in input dei caratteri
 ; fino a quando non e'inserito il carattere INVIO
-;  invio = 13 base 10 oppure Dh base 16  (ASCII)
+;  invio = 13 base 10 oppure 0Dh base 16  (ASCII)
 ; --------------------------------------------------  
 ; CMP a,b - confronta i due operandi
 ;           in pratica effettua una sottrazione
@@ -31,7 +31,7 @@
     
     ciclo:     
         INT 21h   ; INPUT
-        CMP AL, 13; compara il codice ASCII con 13 (invio Dh oppure 13)
+        CMP AL, 13; compara il codice ASCII con 13 (invio 0Dh oppure 13)
     JNE ciclo     ; va all'etichetta se il precedente confronto se generato ZF=1 (AL != 13)
           
    
